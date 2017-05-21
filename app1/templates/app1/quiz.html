@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+</head>
+<body>
+	<div>
+  	<h3>Quiz</h3></div>
+  	<div style="position:absolute;top:12px;left:1300px;"><a href="http://127.0.0.1:8000">Home</a></div>
+  	<hr>
+  	<form action="" method="POST">
+
+  	<ol>
+  		<li>The execution of a loop typically starts with:</li><br>
+  			<input type="radio" id="q1a" name="q1" value="a">initialization statements<br>
+  			<input type="radio" id="q1b" name="q1" value="b">Loop body<br>
+  			<input type="radio" id="q1c" name="q1" value="c">test condition<br>
+  			<input type="radio" id="q1d" name="q1" value="d">update statements<br>
+
+  		<li>The break statement is used to exit from:</li><br>
+  			<input type="radio" id="q2a" name="q2" value="a">an if statement<br>
+  			<input type="radio" id="q2b" name="q2" value="b">a for loop<br>
+  			<input type="radio" id="q2c" name="q2" value="c">a program<br>
+  			<input type="radio" id="q2d" name="q2" value="d">the main( ) function<br>
+
+  		<li>A do-while loop is useful when we want that the statements within the loop must be executed</li><br>
+  			<input type="radio" id="q3a" name="q3" value="a">Only once<br>
+  			<input type="radio" id="q3b" name="q3" value="b">At Least Once<br>
+  			<input type="radio" id="q3c" name="q3" value="c">More than once<br>
+  			<input type="radio" id="q3d" name="q3" value="d">None of the above<br>
+
+  		<li>In what sequence the initialization, testing and execution of body is done in a do-while loop</li><br>
+  			<input type="radio" id="q4a" name="q4" value="a">Initialization, execution of body, testing<br>
+  			<input type="radio" id="q4b" name="q4" value="b">Execution of body, initialization, testing<br>
+  			<input type="radio" id="q4c" name="q4" value="c">Initialization, testing, execution of body <br>
+  			<input type="radio" id="q4d" name="q4" value="d">None of the above<br>
+
+  		<li>Which of the following is not an infinite loop.</li><br>
+  			<input type="radio" id="q5a" name="q5" value="a"><pre style="border:1px solid black; border-radius:5px "> 
+  			int i = 1 ;             
+			while ( 1 ) 
+			{ 
+			    i++ ; 
+			}
+  				
+  			</pre><br>
+  			<input type="radio" id="q5b" name="q5" value="b"><pre style="border:1px solid black; border-radius:5px "> 
+  			for( int i =1; i	&lt; 10; i--)
+			printf("Hello World");
+  				
+  			</pre><br>
+  			<input type="radio" id="q5c" name="q5" value="c"><pre style="border:1px solid black; border-radius:5px "> 
+  			for(int i =1; i	&lt;100; i++)
+			printf("Hello World");	
+  				
+  			</pre><br>
+  			<input type="radio" id="q5d" name="q5" value="d"><pre style="border:1px solid black; border-radius:5px "> 
+  			int i = 0; 
+			do{
+			i--
+			printf("%d ",i);
+			}while(i>0);
+  				
+  			</pre><br>
+
+  		<li>Which of the following statement is used to take the control to the beginning of the loop?</li><br>
+  			<input type="radio" id="q6a" name="q6" value="a">exit<br>
+  			<input type="radio" id="q6b" name="q6" value="b">break<br>
+  			<input type="radio" id="q6c" name="q6" value="c">continue <br>
+  			<input type="radio" id="q6d" name="q6" value="d">None of the above<br>
+
+  		<li>How many * this code will print:
+  		<pre style="border:1px solid black; border-radius:5px "> 
+  			main()
+			{
+			   int i;
+			    for (i=1;i<3;i++)
+			      printf("*");
+			}
+  				
+  			</pre></li><br>
+  			<input type="radio" id="q7a" name="q7" value="a">0<br>
+  			<input type="radio" id="q7b" name="q7" value="b">1<br>
+  			<input type="radio" id="q7c" name="q7" value="c">2 <br>
+  			<input type="radio" id="q7d" name="q7" value="d">4<br>
+
+  		<li>Multiple intialization is not possible in for loop</li><br>
+  			<input type="radio" id="q8a" name="q8" value="a">true<br>
+  			<input type="radio" id="q8b" name="q8" value="b">false<br>
+
+  		<li>For loop can be converted into equivalent while loop</li><br>
+  			<input type="radio" id="q9a" name="q9" value="a">true<br>
+  			<input type="radio" id="q9b" name="q9" value="b">false<br>
+
+  		<li>Loop can not be nested</li><br>
+  			<input type="radio" id="q10a" name="q10" value="a">true<br>
+  			<input type="radio" id="q10b" name="q10" value="b">false<br>
+
+  		<li>When break is encountered inside any loop, control automatically passes to the beginning of the loop.</li><br>
+  			<input type="radio" id="q11a" name="q11" value="a">true<br>
+  			<input type="radio" id="q11b" name="q11" value="b">false<br>
+
+
+
+  	</ol>
+  	<button type="button" name="submit" id="submit" >button</button>
+  	</form>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  		<script type="text/javascript">
+  			var string=""; var tot=0;
+  		$("#submit").click(function(){
+  			//alert("asdad");
+  			var ans1;var ans2;var ans3;var ans4;var ans5; var ans6; var ans7;var ans8;var ans9;var ans10; var ans11;
+  			if (document.getElementById('q1a').checked) {
+			  ans1 = document.getElementById('q1a').value;
+			}
+			if (document.getElementById('q1b').checked) {
+			  ans1 = document.getElementById('q1b').value;
+			}
+			if (document.getElementById('q1c').checked) {
+			  ans1 = document.getElementById('q1c').value;
+			}
+			if (document.getElementById('q1d').checked) {
+			  ans1 = document.getElementById('q1d').value;
+			}
+			if (document.getElementById('q2a').checked) {
+			  ans2 = document.getElementById('q2a').value;
+			}
+			if (document.getElementById('q2b').checked) {
+			  ans2 = document.getElementById('q2b').value;
+			}
+			if (document.getElementById('q2c').checked) {
+			  ans2 = document.getElementById('q2c').value;
+			}
+			if (document.getElementById('q2d').checked) {
+			  ans2 = document.getElementById('q2d').value;
+			}
+			if (document.getElementById('q3a').checked) {
+			  ans3 = document.getElementById('q3a').value;
+			}
+			if (document.getElementById('q3b').checked) {
+			  ans3 = document.getElementById('q3b').value;
+			}
+			if (document.getElementById('q3c').checked) {
+			  ans3 = document.getElementById('q3c').value;
+			}
+			if (document.getElementById('q3d').checked) {
+			  ans3 = document.getElementById('q3d').value;
+			}
+			if (document.getElementById('q4a').checked) {
+			  ans4 = document.getElementById('q4a').value;
+			}
+			if (document.getElementById('q4b').checked) {
+			  ans4 = document.getElementById('q4b').value;
+			}
+			if (document.getElementById('q4c').checked) {
+			  ans4 = document.getElementById('q4c').value;
+			}
+			if (document.getElementById('q4d').checked) {
+			  ans4 = document.getElementById('q4d').value;
+			}
+			if (document.getElementById('q5a').checked) {
+			  ans5 = document.getElementById('q5a').value;
+			}
+			if (document.getElementById('q5b').checked) {
+			  ans5 = document.getElementById('q5b').value;
+			}
+			if (document.getElementById('q5c').checked) {
+			  ans5 = document.getElementById('q5c').value;
+			}
+			if (document.getElementById('q5d').checked) {
+			  ans5 = document.getElementById('q5d').value;
+			}
+			if (document.getElementById('q6a').checked) {
+			  ans6 = document.getElementById('q6a').value;
+			}
+			if (document.getElementById('q6b').checked) {
+			  ans6 = document.getElementById('q6b').value;
+			}
+			if (document.getElementById('q6c').checked) {
+			  ans6 = document.getElementById('q6c').value;
+			}
+			if (document.getElementById('q6d').checked) {
+			  ans6= document.getElementById('q6d').value;
+			}
+			if (document.getElementById('q7a').checked) {
+			  ans7 = document.getElementById('q7a').value;
+			}
+			if (document.getElementById('q7b').checked) {
+			  ans7= document.getElementById('q7b').value;
+			}
+			if (document.getElementById('q7c').checked) {
+			  ans7 = document.getElementById('q7c').value;
+			}
+			if (document.getElementById('q7d').checked) {
+			  ans7 = document.getElementById('q7d').value;
+			}
+			if (document.getElementById('q8a').checked) {
+			  ans8 = document.getElementById('q8a').value;
+			}
+			if (document.getElementById('q8b').checked) {
+			  ans8= document.getElementById('q8b').value;
+			}
+			if (document.getElementById('q9a').checked) {
+			  ans9 = document.getElementById('q9a').value;
+			}
+			if (document.getElementById('q9b').checked) {
+			  ans9= document.getElementById('q9b').value;
+			}
+			if (document.getElementById('q10a').checked) {
+			  ans10 = document.getElementById('q10a').value;
+			}
+			if (document.getElementById('q10b').checked) {
+			  ans10= document.getElementById('q10b').value;
+			}
+			if (document.getElementById('q11a').checked) {
+			  ans11 = document.getElementById('q11a').value;
+			}
+			if (document.getElementById('q11b').checked) {
+			  ans11= document.getElementById('q11b').value;
+			}
+
+			if(ans1=='a')
+			{
+				string+="1 ";
+				tot=tot+1
+			}
+			if(ans2=='b')
+			{
+				string+="2 ";
+				tot=tot+1
+			}
+			if(ans3=='b')
+			{
+				string+="3 ";
+				tot=tot+1
+			}
+			if(ans4=='a')
+			{
+				string+="4 ";
+				tot=tot+1
+			}
+			if(ans5=='c')
+			{
+				string+="5 ";
+				tot=tot+1
+			}
+			if(ans6=='c')
+			{
+				string+="6 ";
+				tot=tot+1
+			}
+			if(ans7=='c')
+			{
+				string+="7 ";
+				tot=tot+1
+			}
+
+			if(ans8=='b')
+			{
+				string+="8 ";
+				tot=tot+1
+			}
+			if(ans9=='a')
+			{
+				string+="9 ";
+				tot=tot+1
+			}
+			if(ans10=='b')
+			{
+				string+="10 ";
+				tot=tot+1
+			}
+			if(ans11=='b')
+			{
+				string+="11 ";
+				tot=tot+1
+			}
+
+			
+
+			alert("you answered the following correctly:"+string+"\ntotal number of correct answers="+tot+"/11");
+
+  			string="";
+  			tot=0;
+  		});
+  	</script>
+  </div>
+</body>
+</html>

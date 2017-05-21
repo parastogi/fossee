@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sitemaker</title>
+	
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <style type="text/css">
+    .main{
+      padding-left: 10px;
+    }
+    .XYZ{
+      height: 700px;
+
+    }
+    .button{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .redc{
+      color:#100;
+    }
+    .abc{
+      margin-top:10px; 
+      width:300px;
+    }
+  </style>
+</head>
+
+
+
+<body>
+
+	<div class="navbar-fixed" id="onenav" style="display: :block">
+    <nav>
+        <a href="#!" class="brand-logo center">LOOPS (Factorial calculations)</a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="navbar-fixed" id="twonav" style="display:none">
+    <nav>
+        <a href="#!" class="brand-logo center">LOOPS (Height of pyramid)</a>
+      </div>
+    </nav>
+  </div>
+
+
+  <br>
+
+
+    <div class="row main">
+    <div id="firstexp" style="display:block;">
+      <div class="col l3 XYZ" style="border: 1px solid black; border-radius:10px">
+        <h2>Initialize</h2><hr>
+        <br>
+        <p>Select loop Type</p>
+        
+        <form action="/afcstisol/" method="POST">
+          <div class="input-field col s12">
+            <select id="select">
+              <option value="1" id="select1">for</option>
+              <option value="2" id="select2">while</option>
+              <option value="3" id="select3">do-while
+              </option>
+            </select>
+            <label>Materialize Select</label>
+          </div>
+          <br><br>
+          <p>enter number1 for calculating</p>
+          <div class="row">
+          <div class="input-field col s6 offset-s3">
+            <input  id="number1" type="text" name="number1">
+          </div>
+          </div>
+          <a class="waves-effect waves-light btn col s4" id="button1" >Start</a>
+          <a class="waves-effect waves-light btn col s4 offset s1 disabled " id="disbutton1">Next</a>
+
+          <a class="waves-effect waves-light btn-large abc" id="buttonmenu1" >Swith to nested loop</a>
+          <br><br>
+      </div>
+    </div>
+
+    <!-- 2nd exp-->
+
+    <div id="secondexp" style="display:none;">
+      <div class="col l3 XYZ" style="border: 1px solid black; border-radius:10px">
+        <h2>Initialize</h2><hr>
+        <br>
+        <p>Enter Height of Pyramid</p>
+        
+        <form action="/afcstisol/" method="POST">
+          <div class="row">
+            <div class="input-field col s6 offset-s3">
+            <input  id="number2" type="text" name="number2">
+            </div>
+          </div><br>
+          <div class="row">
+          <a class="waves-effect waves-light btn col s4" id="button2" >Start</a>
+          <a class="waves-effect waves-light btn col s4 offset s1 disabled " id="disbutton2">Next</a></div>
+          <div class="row"><a class="waves-effect waves-light btn abc" id="buttonmenu2" >Switch to Simple loop</a></div>
+          <br><br>
+      </div>
+    </div>
+
+
+      <div class="col l4 XYZ" style="border: 1px solid black; border-radius:10px">
+        <h2>Step Execution</h2><hr>
+        <br>  
+        <pre id="proga1" style="display:none">
+          <span id="a1" class="">int main()</span>
+          <span id="a2">{</span>
+          <span id="a3">  int p;</span>
+          <span id="a4">  int fact=1;</span>
+          <span id="a5">  if(p==0)  </span>
+          <span id="a6">  {</span>
+          <span id="a7">    return 1;</span>
+          <span id="a8">  }</span>
+          <span id="a9">  for(int i=p;i&gt;=1;i--)</span>
+          <span id="a10">  {</span>
+          <span id="a11">    fact=fact*i;</span>
+          <span id="a12">  }</span>
+          <span id="a13">  return fact;</span>
+          <span id="a14">}</span>
+        </pre>
+
+        <pre id="proga2" style="display:none">
+          <span id="b1">int main(){</span>
+          <span id="b2">  int p;</span>
+          <span id="b3">  int fact=1;</span>
+          <span id="b4">  if(p==0)</span>
+          <span id="b5">  {</span>
+          <span id="b6">     return 1;</span>
+          <span id="b7">  }</span>
+          <span id="b8">  while (i>=1)</span>
+          <span id="b9">  {</span>
+          <span id="b10">    fact=fact*i;</span>
+          <span id="b11">    i--;</span>
+          <span id="b12">  }</span>
+          <span id="b13">  return fact;</span>
+          <span id="b14">}</span>
+          
+        </pre>
+
+
+
+        <pre id="proga3" style="display:none">
+          <span id="c1">int main(){</span>
+          <span id="c2">  int p;</span>
+          <span id="c3">  int fact=1;</span>
+          <span id="c4">  int i=p;</span>
+          <span id="c5">  if(p==0)</span>
+          <span id="c6">  {</span>
+          <span id="c7">      return 1;</span>
+          <span id="c8">  }</span>
+          <span id="c9">  do</span>
+          <span id="c10"> {</span>
+          <span id="c11">     fact=fact*i;</span>
+          <span id="c12">     i--;</span>
+          <span id="c13"> }while(i>=1);</span>
+          <span id="c14">}</span>
+
+        </pre>
+
+
+        <pre id="proga4" style="display:none">
+          <span id="d1">int main(){</span>
+          <span id="d2">int i,j,k;</span>
+          <span id="d3">int height;</span>
+          <span id="d4">for (i=0;i&lt;height;i++)</span>
+          <span id="d5">  {</span>
+          <span id="d6">  for(j=0;j&lt;height-i-1;j++) </span>
+          <span id="d7">  {</span>
+          <span id="d8">    printf(" ");</span>
+          <span id="d9">  }</span>
+          <span id="d10">  for(k=j;k&lt;height-1;k++) </span>
+          <span id="d11">  {</span>
+          <span id="d12">    printf("*");</span>
+          <span id="d13">    printf(" ");</span>
+          <span id="d14">  }</span>
+          <span id="d15">  printf("*");</span>
+          <span id="d16">  for(j=0;j&lt;height-i-1;j++)</span>
+          <span id="d17">  {</span>
+          <span id="d18">  printf(" ");</span>
+          <span id="d19">  }</span>
+          <span id="d20">  printf("\n");</span>
+          <span id="d21"> }</span>
+          <span id="d22">return 0;</span>
+          <span id="d23">}</span>
+        </pre>
+
+        
+      </div>
+      
+      <div id="paras1" style="display:block">
+      <div class="col l5 XYZ" style="border: 1px solid black; border-radius:10px">
+           <h2>Code Output</h2><hr>
+           <p>local variables</p><hr>   
+           <div id="ans1">
+             <p id="i">i:</p>
+             <p id="fact">fact:</p>             
+           </div>
+           <div  style="width:400px;height:300px;border:1px solid black;border-radius:5px">
+                <center><p id="ans2"> </p></center>
+
+           </div>   
+      </div>
+     </div>
+
+     <div id="paras2" style="display:none">
+      <div class="col l5 XYZ" style="border: 1px solid black; border-radius:10px">
+           <h2>Code Output</h2><hr>
+           <p>local variables</p><hr>   
+           <div id="ansb">
+             <p id="i2">i:</p>
+             <p id="j2">j:</p>
+             <p id="k2">k:</p>             
+           </div>
+           <div  style="width:400px;height:300px;border:1px solid black;border-radius:5px">
+                <center><p id="ansb2" style="color:red"> </p></center>
+
+           </div>   
+      </div>
+     </div>
+    
+
+    </div>
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $('select').material_select();
+  });
+  </script>
+
+
+  <script type="text/javascript">
+  var option;
+        $("#button1").click(function(){
+            $(this).addClass('disabled');
+            $("#disbutton1").removeClass("disabled");
+            $("#number1").addClass("disabled");
+            $("#select").addClass("disabled");
+
+
+            var sel1=document.getElementById("select1");
+            var sel2=document.getElementById("select2");
+            var sel3=document.getElementById("select3");
+            var e1=document.getElementById("proga1");
+            var e2=document.getElementById("proga2");
+            var e3=document.getElementById("proga3");
+
+
+            if(sel1.selected==true){
+              e1.style.display="block";
+              document.getElementById("a1").style.color="red";
+              option=1;
+            }
+
+            if(sel2.selected==true){
+              e2.style.display="block";
+              document.getElementById("b1").style.color="red";
+              option=2;
+            }
+
+            if(sel3.selected==true){
+              e3.style.display="block";
+              document.getElementById("c1").style.color="red";
+              option=3;
+            }
+            
+         });
+            var i=1;  var iter=1; var fact=1;
+
+      var ni; var c=0;
+            //for (i=1;i<=14;i++){
+            $("#disbutton1").click(function(){
+                if(option==1)
+                {
+                      var p=document.getElementById("number1");
+                      if(p.value!=0)
+                      {
+
+                          if(c==0){
+                            
+                           ni=p.value;
+                           c++;
+                          }
+                          document.getElementById("a"+i).style.color="black";
+
+                          if(i==12 && iter==p.value)
+                          {
+                            i++;
+                            document.getElementById("a"+i).style.color="red";
+                            var inht=document.getElementById('ans2').innerHTML;
+                            //alert(inht);
+                            inht=inht+fact.toString()+"*"+ni.toString()+"=";
+                            document.getElementById('ans2').innerHTML=inht;
+                            fact=fact*ni;
+                            inht=inht+fact.toString()+"<br>";
+                            document.getElementById('ans2').innerHTML=inht;
+                            document.getElementById('i').innerHTML="i:"+ni.toString();
+                            document.getElementById('fact').innerHTML="fact:"+fact.toString();
+                            ni--;
+                          }
+
+                          else if(i==12 && iter!=p.value){
+                            i=9;
+                            document.getElementById("a"+i).style.color="red";
+                             iter++;
+                            var inht=document.getElementById('ans2').innerHTML;
+                            //alert(inht);
+                            inht=inht+fact.toString()+"*"+ni.toString()+"=";
+                            document.getElementById('ans2').innerHTML=inht;
+                            fact=fact*ni;
+                            inht=inht+fact.toString()+"<br>";
+                            document.getElementById('ans2').innerHTML=inht;
+                            document.getElementById('i').innerHTML="i:"+ni.toString();
+                            document.getElementById('fact').innerHTML="fact:"+fact.toString();
+                            ni--;
+                          }
+
+                          else if(i==14)
+                            alert("over");
+
+                          else{
+                             i++;
+                            document.getElementById("a"+i).style.color="red";
+                          }
+                        }
+                        else
+                        {
+                          document.getElementById("a"+i).style.color="black";
+                          i++;
+                          document.getElementById("a"+i).style.color="red";
+                          if(i==8)
+                          {
+                            alert("code running over");
+                            option=-1;
+                          }
+                        }
+
+                    }
+//--------------------------------------------------
+
+
+                    if(option==2)
+                    {
+                      var p=document.getElementById("number1");
+                      if(p.value!=0)
+                      {
+                            if(c==0){
+                              
+                             ni=p.value;
+                             c++;
+                            }
+                            document.getElementById("b"+i).style.color="black";
+
+                            if(i==12 && iter==p.value)
+                            {
+                              i++;
+                              document.getElementById("b"+i).style.color="red";
+                              var inht=document.getElementById('ans2').innerHTML;
+                              //alert(inht);
+                              inht=inht+fact.toString()+"*"+ni.toString()+"=";
+                              document.getElementById('ans2').innerHTML=inht;
+                              fact=fact*ni;
+                              inht=inht+fact.toString()+"<br>";
+                              document.getElementById('ans2').innerHTML=inht;
+                              document.getElementById('i').innerHTML="i:"+ni.toString();
+                              document.getElementById('fact').innerHTML="fact:"+fact.toString();
+                              ni--;
+                            }
+
+                            else if(i==12 && iter!=p.value){
+                              i=8;
+                              document.getElementById("b"+i).style.color="red";
+                               iter++;
+                              var inht=document.getElementById('ans2').innerHTML;
+                              //alert(inht);
+                              inht=inht+fact.toString()+"*"+ni.toString()+"=";
+                              document.getElementById('ans2').innerHTML=inht;
+                              fact=fact*ni;
+                              inht=inht+fact.toString()+"<br>";
+                              document.getElementById('ans2').innerHTML=inht;
+                              document.getElementById('i').innerHTML="i:"+ni.toString();
+                              document.getElementById('fact').innerHTML="fact:"+fact.toString();
+                              ni--;
+                            }
+
+                            else if(i==14)
+                              alert("over");
+
+                            else{
+                               i++;
+                              document.getElementById("b"+i).style.color="red";
+                            }
+                          }
+
+                          else
+                          {
+                            document.getElementById("b"+i).style.color="black";
+                            i++;
+                            document.getElementById("b"+i).style.color="red";
+                            if(i==7)
+                            {
+                              alert("code running over");
+                              option=-1;
+                            }
+                          }
+                    }
+
+//--------------------------------------------
+
+                    if(option==3)
+                    {
+                      var p=document.getElementById("number1");
+                      if(p.value!=0)
+                      {
+                            if(c==0){
+                              
+                             ni=p.value;
+                             c++;
+                            }
+                            document.getElementById("c"+i).style.color="black";
+
+                            if(i==13 && iter==p.value)
+                            {
+                              i++;
+                              document.getElementById("c"+i).style.color="red";
+                              var inht=document.getElementById('ans2').innerHTML;
+                              //alert(inht);
+                              inht=inht+fact.toString()+"*"+ni.toString()+"=";
+                              document.getElementById('ans2').innerHTML=inht;
+                              fact=fact*ni;
+                              inht=inht+fact.toString()+"<br>";
+                              document.getElementById('ans2').innerHTML=inht;
+                              document.getElementById('i').innerHTML="i:"+ni.toString();
+                              document.getElementById('fact').innerHTML="fact:"+fact.toString();
+                              ni--;
+                            }
+
+                            else if(i==13 && iter!=p.value){
+                              i=9;
+                              document.getElementById("c"+i).style.color="red";
+                               iter++;
+                              var inht=document.getElementById('ans2').innerHTML;
+                              //alert(inht);
+                              inht=inht+fact.toString()+"*"+ni.toString()+"=";
+                              document.getElementById('ans2').innerHTML=inht;
+                              fact=fact*ni;
+                              inht=inht+fact.toString()+"<br>";
+                              document.getElementById('ans2').innerHTML=inht;
+                              document.getElementById('i').innerHTML="i:"+ni.toString();
+                              document.getElementById('fact').innerHTML="fact:"+fact.toString();
+                              ni--;
+                            }
+
+                            else if(i==14)
+                              alert("over");
+
+                            else{
+                               i++;
+                              document.getElementById("c"+i).style.color="red";
+                            }
+                          }
+
+                          else
+                          {
+                            document.getElementById("c"+i).style.color="black";
+                            i++;
+                            document.getElementById("c"+i).style.color="red";
+                            if(i==7)
+                            {
+                              alert("code running over");
+                              option=-1;
+                            }
+                          }
+                    } 
+
+             //("#a"+i).addclass("redc");
+                 
+               });
+      
+      //}  
+  </script>
+
+  <script type="text/javascript">
+
+                    var index=1; var oiter=1;var iiter1=1; var iiter2=1; var iiter3=1;
+                    var x=0; var y=0; var z=0;var co=0; var ge; var counter=0;
+                    $("#buttonmenu1").click(function(){
+                      document.getElementById('firstexp').style.display="none";
+                      document.getElementById('secondexp').style.display="block";
+                      document.getElementById('paras2').style.display="block";
+                      document.getElementById('paras1').style.display="none";
+                      document.getElementById('twonav').style.display="block";
+                      document.getElementById('onenav').style.display="none";
+                    });
+                    $("#buttonmenu2").click(function(){
+                      document.getElementById('firstexp').style.display="block";
+                      document.getElementById('secondexp').style.display="none";
+                      document.getElementById('paras1').style.display="block";
+                      document.getElementById('paras2').style.display="none";
+                      document.getElementById('onenav').style.display="block";
+                      document.getElementById('twonav').style.display="none";
+                    });
+
+                    $("#button2").click(function(){
+                            $(this).addClass('disabled');
+                            $("#disbutton2").removeClass("disabled");
+                            $("#number2").addClass("disabled");
+                            var e4=document.getElementById("proga4");
+                            e4.style.display="block";
+                            document.getElementById("d1").style.color="red";
+                    });
+
+                    $("#disbutton2").click(function(){
+                          var he=document.getElementById("number2");
+                          var hei=he.value;
+                          if(counter==0){ge=hei-1;counter++;}
+                          //alert(ge);
+                          document.getElementById("d"+index).style.color="black";
+                          if(index==9 && iiter1<hei-x-1)
+                          {
+                            index=6;
+                            document.getElementById("d"+index).style.color="red";
+                            var temp=document.getElementById('ansb2').innerHTML;
+                            temp=temp+"_";
+                            document.getElementById('ansb2').innerHTML=temp;
+                            iiter1++;
+                            y++;
+
+                          }
+
+                          else if(index==9 && iiter1==hei-x-1)
+                          {
+                            index++;
+                            document.getElementById("d"+index).style.color="red";
+                            var temp=document.getElementById('ansb2').innerHTML;
+                            temp=temp+"_";
+                            document.getElementById('ansb2').innerHTML=temp;
+                            iiter1++;
+                            y++;
+
+                          }
+
+                          else if(index==14 && iiter2<hei-ge)
+                          {
+                            index=10;
+                            document.getElementById("d"+index).style.color="red";
+                            var temp=document.getElementById('ansb2').innerHTML;
+                            temp=temp+"<span style='color:blue'>*</span>_";
+                            document.getElementById('ansb2').innerHTML=temp;
+                            iiter2++;
+                            z++;
+                            co++;
+
+                          }
+
+
+                          else if(index==19 && iiter3<hei-x-1)
+                          {
+                            index=16;
+                            document.getElementById("d"+index).style.color="red";
+                            var temp=document.getElementById('ansb2').innerHTML;
+                            temp=temp+"_";
+                            document.getElementById('ansb2').innerHTML=temp;
+                            iiter3++;
+                            y++;
+
+                          }
+
+                          else if(index==19 && iiter3==hei-x-1)
+                          {
+                            index++;
+                            document.getElementById("d"+index).style.color="red";
+                            var temp=document.getElementById('ansb2').innerHTML;
+                            temp=temp+"_";
+                            document.getElementById('ansb2').innerHTML=temp;
+                            iiter3++;
+                            y++;
+
+                          }
+
+                          else if(index==21 && oiter<hei)
+                          {
+                            index=4;
+                            document.getElementById("d"+index).style.color="red";
+                            var temp=document.getElementById('ansb2').innerHTML;
+                            temp=temp+"<br>";
+                            document.getElementById('ansb2').innerHTML=temp;
+                            oiter++;
+                            x++;
+                            iiter1=1;
+                            iiter2=1;
+                            iiter3=1;
+                            y=0;
+                            z=0;
+                            ge--;
+
+                            
+
+                          }
+                          else if(index==15)
+                          {
+                             index++;
+                          document.getElementById("d"+index).style.color="red";
+                            var temp=document.getElementById('ansb2').innerHTML;
+                            temp=temp+"<span style='color:blue'>*</span>";
+                            document.getElementById('ansb2').innerHTML=temp;
+                            y=0;
+                          }
+
+
+                          else if(index==5)
+                          { 
+                             document.getElementById('i2').innerHTML='i:'+x.toString();
+                             index++;
+                          document.getElementById("d"+index).style.color="red";
+                          }
+
+                          else if(index==7)
+                          {  
+                             document.getElementById('j2').innerHTML='j:'+y.toString();
+                             index++;
+                          document.getElementById("d"+index).style.color="red";
+                          }
+
+                          else if(index==11)
+                          {  
+                             document.getElementById('k2').innerHTML='k:'+z.toString();
+                             index++;
+                            document.getElementById("d"+index).style.color="red";
+                          }
+
+                          else if(index==17)
+                          {  
+                             document.getElementById('j2').innerHTML='j:'+y.toString();
+                             index++;
+                            document.getElementById("d"+index).style.color="red";
+                          }
+
+                          else {
+                          index++;
+                          document.getElementById("d"+index).style.color="red";
+                        }
+                    });
+
+
+  </script>
+</body>
+</html>
